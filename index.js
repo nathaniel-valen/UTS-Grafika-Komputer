@@ -1,18 +1,15 @@
-// Nathanael Kanaya Chriesman
-// 2272018
+import { init_canvas, gambarApel } from './lib.js';
 
-// Init canvas dan apple drawer
-const canvas = document.getElementById('myCanvas');
-const appleDrawer = new AppleDrawer(canvas);
+document.addEventListener('DOMContentLoaded', () => {
+    init_canvas('myCanvas'); 
+    const gambar = new gambarApel(); // munculkan gambar apel
 
-// Fungsi untuk memindahkan apel
-function moveApple() {
-    const newPosition = appleDrawer.getRandomPosition();
-    appleDrawer.drawApple(newPosition.x, newPosition.y);
-}
+    // Fungsi untuk menggambar apel di posisi acak
+    function moveApple() {
+        const newPosition = gambar.getRandomPosition();
+        gambar.drawApple(newPosition.x, newPosition.y);
+    }
 
-// Gambar apel pertama kali
-moveApple();
-
-// memindahkan apel setiap 3 detik
-setInterval(moveApple, 3000);
+    moveApple();
+    setInterval(moveApple, 3000);
+});
