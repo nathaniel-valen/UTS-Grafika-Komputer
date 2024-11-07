@@ -1,0 +1,18 @@
+/* Reset default margin dan padding */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Set height to full viewport */
+    background-color: #f0f0f0; /* Optional: memberikan warna latar belakang */
+  }
+  
+  /* Pastikan canvas tetap terpusat */
+  canvas {
+    display: block; /* Menghapus jarak ekstra di bawah canvas */
+    border-radius: 10px; /* Optional: sudut border bulat untuk canvas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: memberikan efek bayangan */
+  }
+  
